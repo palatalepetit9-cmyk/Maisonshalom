@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#72c7f4">
+<meta name="google-site-verification" content="_6002TOuLxbLpzoKYj10A-L6VccwJU1WQh0cfhZ1Y1c" />
+<meta name="description" content="Maison Shalom : découvrez nos vêtements pour hommes et femmes ainsi que nos sacs. Choisissez vos articles et commandez facilement.">
+<title>Maison Shalom | Mode &amp; Élégance</title>
+<style>
+:root{--blue:#168bc4;--blue-dark:#12658e;--sky:#dff4ff;--sky2:#bce8fc;--cream:#fffefa;--text:#263b49;--muted:#687b86;--border:#d8eaf2;--shadow:0 10px 32px rgba(25,104,145,.12)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--cream);line-height:1.65}
+button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:#155a7b;color:#fff;text-align:center;padding:8px 12px;font-size:12px;letter-spacing:1.4px}
+header{background:#fffefa;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--border)}
+.nav{min-height:75px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{display:flex;flex-direction:column;line-height:1.2}.brand strong{font-family:Georgia,serif;font-size:26px;letter-spacing:1px;color:var(--blue-dark)}.brand small{font-size:9px;letter-spacing:3px;text-align:center;margin-top:5px;color:var(--muted)}
+.navlinks{display:flex;align-items:center;gap:21px;font-size:13px}.navlinks a:hover{color:var(--blue)}
+.nav-actions{display:flex;gap:10px}.icon-button{position:relative;width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--border);border-radius:50%;background:#fff;color:var(--blue-dark);font-size:20px}
+.count{position:absolute;right:-3px;top:-4px;background:var(--blue-dark);color:#fff;min-width:19px;height:19px;border-radius:50%;font-size:11px;display:grid;place-items:center}.menu-toggle{display:none}
+.hero{background:linear-gradient(120deg,#e9f8ff,#f7fcff 56%,#cdeeff);overflow:hidden}
+.hero-inner{min-height:460px;padding:60px 0;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px}
+.eyebrow{color:var(--blue-dark);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:bold}
+.hero h1{font-family:Georgia,serif;font-size:clamp(36px,6vw,62px);font-weight:400;line-height:1.12;margin:17px 0}.hero h1 span{color:var(--blue-dark);font-style:italic}
+.hero p{max-width:490px;color:#5d7481;font-size:15px}
+.btn{display:inline-block;text-align:center;background:var(--blue-dark);color:#fff;border:1px solid var(--blue-dark);padding:13px 22px;border-radius:5px;font-size:13px;font-weight:bold}
+.btn-outline{background:transparent;color:var(--blue-dark)}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.hero-art{position:relative;min-height:320px;display:grid;place-items:center}.hero-circle{width:min(320px,85%);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#a9e2ff,#62bce9);display:grid;place-items:center;box-shadow:var(--shadow)}
+.hero-monogram{font-family:Georgia,serif;font-size:100px;color:#fff;border:1px solid rgba(255,255,255,.85);width:72%;height:72%;border-radius:50%;display:grid;place-items:center}
+.hero-label{position:absolute;bottom:7%;right:0;background:#fff;padding:14px 20px;box-shadow:var(--shadow);font-family:Georgia,serif;font-style:italic;color:var(--blue-dark)}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--border);background:#fff}.benefit{text-align:center;padding:21px 10px;border-right:1px solid var(--border);font-size:12px;color:var(--muted)}.benefit:last-child{border:0}.benefit strong{display:block;color:var(--text);margin-bottom:4px;font-size:13px}
+section{padding:72px 0}.section-head{text-align:center;margin-bottom:30px}.section-head h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,4vw,42px);margin:8px 0}.section-head p{color:var(--muted);font-size:14px}
+.search-box{display:block;width:min(430px,100%);margin:0 auto 22px;padding:13px 17px;border:1px solid var(--border);background:#fff;border-radius:5px}
+.filters{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:22px 0 28px}.filter-btn{border:1px solid var(--border);background:#fff;padding:10px 19px;border-radius:30px;color:var(--text);font-size:12px}.filter-btn.active{background:var(--blue-dark);color:#fff;border-color:var(--blue-dark)}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.product-card{min-width:0;background:#fff;border:1px solid #e3eef3;border-radius:8px;overflow:hidden}
+.product-image{height:255px;position:relative;background:linear-gradient(145deg,#eefaff,#cfeeff);overflow:hidden;cursor:zoom-in}
+.product-image::before{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#397d9d;font-size:13px}
+.product-image::after{content:"⌕";position:absolute;right:10px;bottom:10px;border-radius:50%;background:rgba(255,255,255,.95);color:var(--blue-dark);width:35px;height:35px;display:grid;place-items:center;pointer-events:none}
+.product-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.product-info{padding:14px}.product-category{text-transform:uppercase;color:var(--blue-dark);letter-spacing:1.2px;font-size:9px;font-weight:bold}.product-info h3{font-family:Georgia,serif;font-weight:400;font-size:19px;margin:3px 0 13px}.product-buttons{display:flex;gap:7px}
+.order-btn{flex:1;min-width:0;background:var(--blue-dark);color:#fff;border:0;padding:11px 6px;border-radius:4px;font-size:12px;font-weight:bold}
+.add-btn{flex-shrink:0;width:42px;border:1px solid var(--border);background:#e9f7ff;color:var(--blue-dark);border-radius:4px;font-size:20px}
+.empty-state{grid-column:1/-1;text-align:center;color:var(--muted);padding:45px 10px}
+.about{background:linear-gradient(120deg,#f5fbff,#e8f7ff)}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center}.about-art{min-height:350px;background:linear-gradient(145deg,#bde9ff,#5cb8e7);display:grid;place-items:center;border-radius:180px 180px 12px 12px}.about-art div{border:1px solid rgba(255,255,255,.9);color:#fff;padding:30px;font-family:Georgia,serif;text-align:center;font-size:38px}
+.about-copy h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(32px,4vw,44px);line-height:1.2;margin:12px 0 20px}.about-copy p{font-size:14px;color:#5d7481}
+.about-parts{display:grid;gap:12px;margin-bottom:14px}.about-part{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.8);padding:15px;border-radius:5px;border-left:3px solid var(--blue-dark)}.about-part b{font-family:Georgia,serif;font-size:22px;color:var(--blue-dark);line-height:1.2}
+.values{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}.value{background:rgba(255,255,255,.8);padding:15px;border-radius:5px;font-size:12px}.value strong{display:block;margin-bottom:4px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}.step{text-align:center;border:1px solid var(--border);border-radius:8px;padding:27px 18px}.step-number{margin:0 auto 15px;width:45px;height:45px;display:grid;place-items:center;border-radius:50%;background:var(--sky);color:var(--blue-dark);font-family:Georgia,serif;font-size:22px}.step h3{font-family:Georgia,serif;font-size:20px;font-weight:400;margin-bottom:7px}.step p{font-size:13px;color:var(--muted)}
+.contact{padding:0 0 72px}.contact-box{background:linear-gradient(120deg,#155a7b,#168bc4);color:#fff;text-align:center;border-radius:10px;padding:47px 20px}.contact-box h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,5vw,42px);margin:8px 0}.contact-box p{max-width:500px;margin:0 auto 22px;font-size:14px;color:#e8f7ff}.contact-box .btn{background:#fff;border-color:#fff;color:var(--blue-dark)}
+footer{background:#173b4d;color:#e7f6ff;padding:30px 0 18px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}.footer-brand{font-family:Georgia,serif;font-size:22px}.footer-note{font-size:11px;color:#c5e0ed;margin-top:5px}.footer-links{display:flex;gap:18px;font-size:12px}.copyright{border-top:1px solid #426576;text-align:center;padding-top:15px;margin-top:25px;font-size:11px;color:#c5e0ed}
+.overlay{position:fixed;inset:0;background:rgba(20,40,50,.75);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}.overlay.open{display:flex}.dialog{background:var(--cream);width:min(620px,100%);max-height:90vh;overflow-y:auto;border-radius:10px;position:relative;padding:25px}.close-btn{position:absolute;right:12px;top:12px;width:37px;height:37px;background:#fff;color:var(--text);border:1px solid var(--border);border-radius:50%;font-size:22px;z-index:2}
+.zoom-dialog{background:#142b38;width:min(900px,100%);padding:15px;text-align:center}.zoom-frame{overflow:auto;max-height:76vh}.zoom-frame img{margin:auto;max-height:75vh;width:auto;max-width:100%;object-fit:contain}.zoom-caption{color:#fff;padding:10px 0 0;font-size:13px}
+.dialog h2{font-family:Georgia,serif;font-weight:400;font-size:29px;padding-right:35px;margin-bottom:8px}.dialog-subtitle{color:var(--muted);font-size:13px;margin-bottom:20px}.cart-items{display:grid;gap:12px;margin:18px 0}.cart-row{display:flex;align-items:center;gap:12px;padding:10px;background:#fff;border:1px solid var(--border);border-radius:5px}.cart-row img{width:62px;height:72px;object-fit:cover;border-radius:4px;background:var(--sky);flex-shrink:0}.cart-row-info{flex:1;min-width:0;font-size:13px}.remove-btn{border:0;background:transparent;color:var(--blue-dark);padding:8px;font-size:12px}
+.field{display:grid;gap:6px;margin:14px 0}.field label{font-size:12px;font-weight:bold}.field input{width:100%;padding:12px;border:1px solid var(--border);background:#fff;border-radius:5px}.dialog .btn{display:block;width:100%;margin-top:8px;cursor:pointer}.form-error{color:#a52b3a;font-size:12px;margin-top:8px}body.locked{overflow:hidden}
+.toast-stack{position:fixed;top:18px;right:16px;z-index:300;display:grid;gap:10px;width:min(360px,calc(100% - 32px));pointer-events:none}
+.toast{padding:14px 16px;border-radius:14px;background:linear-gradient(135deg,#155a7b,#168bc4);color:#fff;box-shadow:0 14px 38px rgba(10,65,90,.28);font-size:13px}.toast strong{display:block}.toast span{display:block;font-size:12px;color:#e6f7ff}
+@media(max-width:900px){.products{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.product-image{height:230px}.navlinks{gap:12px}}
+@media(max-width:650px){.nav{min-height:68px}.menu-toggle{display:grid}.navlinks{position:absolute;display:none;top:100%;left:0;right:0;padding:18px 4%;background:var(--cream);border-bottom:1px solid var(--border);flex-direction:column;align-items:stretch;gap:0}.navlinks.show{display:flex}.navlinks a{padding:12px 5px;border-bottom:1px solid #e7f0f5}.hero-inner{grid-template-columns:1fr;padding:44px 0 30px;text-align:center;gap:20px}.hero p{margin:auto}.hero-buttons{justify-content:center}.hero-art{min-height:235px}.hero-circle{width:220px}.hero-monogram{font-size:72px}.hero-label{right:4%;bottom:0;font-size:13px;padding:10px 14px}.benefit{padding:14px 5px;font-size:10px}.benefit strong{font-size:11px}section{padding:52px 0}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product-image{height:auto;aspect-ratio:3/4}.product-info{padding:10px}.product-info h3{font-size:17px;margin-bottom:10px}.product-buttons{gap:5px}.order-btn{font-size:11px;padding:10px 3px}.add-btn{width:37px}.about-grid{grid-template-columns:1fr;gap:28px}.about-art{min-height:235px}.steps{grid-template-columns:1fr;gap:12px}.contact-box{padding:35px 17px}.footer-inner{justify-content:center;text-align:center}.footer-links{justify-content:center;flex-wrap:wrap}.dialog{padding:22px 17px}}
+</style>
+</head>
+<body>
+<div class="toast-stack" id="toastStack"></div>
+<div class="topbar">MAISON SHALOM · MODE &amp; ÉLÉGANCE</div>
+<header><div class="container nav">
+<a href="#accueil" class="brand"><strong>Maison Shalom</strong><small>ÉLÉGANCE &amp; STYLE</small></a>
+<nav class="navlinks" id="navlinks"><a href="#accueil">Accueil</a><a href="#collection">Collection</a><a href="#apropos">À propos de nous</a><a href="#comment">Comment commander</a><a href="#contact">Contact</a></nav>
+<div class="nav-actions"><button class="icon-button" id="openCart" aria-label="Ouvrir mon sac" title="Mon sac">♧<span class="count" id="cartCount">0</span></button><button class="icon-button menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button></div>
+</div></header>
+<main>
+<section class="hero" id="accueil"><div class="container hero-inner"><div><div class="eyebrow">Bienvenue chez Maison Shalom</div><h1>Le style qui vous ressemble, <span>l'élégance qui vous distingue.</span></h1><p>Explorez notre collection de vêtements pour hommes et femmes, ainsi que nos sacs. Trouvez vos coups de cœur et contactez-nous pour passer votre commande.</p><div class="hero-buttons"><a class="btn" href="#collection">Découvrir la collection</a><a class="btn btn-outline" href="#apropos">Qui sommes-nous ?</a></div></div><div class="hero-art"><div class="hero-circle"><div class="hero-monogram">S</div></div><div class="hero-label">Votre style, votre signature.</div></div></div></section>
+<div class="benefits"><div class="benefit"><strong>✧ Pour tous les styles</strong>Hommes et femmes</div><div class="benefit"><strong>♡ Une collection à découvrir</strong>Vêtements et sacs</div><div class="benefit"><strong>✧ Une commande simple</strong>Contact direct avec la boutique</div></div>
+<section id="collection"><div class="container"><div class="section-head"><div class="eyebrow">Notre sélection</div><h2>Découvrez notre collection</h2><p>Choisissez vos articles préférés et observez chaque détail.</p></div>
+<input class="search-box" id="searchInput" type="search" placeholder="Rechercher un habit, un sac, un numéro..." aria-label="Rechercher un article">
+<div class="filters"><button class="filter-btn active" data-filter="tout">Tout voir</button><button class="filter-btn" data-filter="vetement">Vêtements</button><button class="filter-btn" data-filter="sac">Sacs</button></div>
+<div class="products">
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 1"><img src="Habit1.jpg" alt="Habit 1"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 1</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 2"><img src="Habit2.jpg" alt="Habit 2"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 2</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 3"><img src="Habit3.jpg" alt="Habit 3"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 3</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 4"><img src="Habit4.jpg" alt="Habit 4"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 4</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 5"><img src="Habit5.jpg" alt="Habit 5"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 5</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 6"><img src="Habit6.jpg" alt="Habit 6"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 6</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 7"><img src="Habit7.jpg" alt="Habit 7"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 7</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 8"><img src="Habit8.jpg" alt="Habit 8"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 8</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 9"><img src="Habit9.jpg" alt="Habit 9"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 9</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 10"><img src="Habit10.jpg" alt="Habit 10"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 10</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 11"><img src="Habit11.jpg" alt="Habit 11"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 11</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 12"><img src="Habit12.jpg" alt="Habit 12"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 12</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 13"><img src="Habit13.jpg" alt="Habit 13"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 13</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 14"><img src="Habit14.jpg" alt="Habit 14"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 14</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 15"><img src="Habit15.jpg" alt="Habit 15"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 15</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 16"><img src="Habit16.jpg" alt="Habit 16"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 16</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 17"><img src="Habit17.jpg" alt="Habit 17"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 17</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 18"><img src="Habit18.jpg" alt="Habit 18"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 18</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 19"><img src="Habit19.jpg" alt="Habit 19"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 19</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 20"><img src="Habit20.jpg" alt="Habit 20"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 20</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 21"><img src="Habit21.jpg" alt="Habit 21"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 21</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 22"><img src="Habit22.jpg" alt="Habit 22"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 22</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 23"><img src="Habit23.jpg" alt="Habit 23"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 23</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 24"><img src="Habit24.jpg" alt="Habit 24"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 24</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 25"><img src="Habit25.jpg" alt="Habit 25"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 25</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 26"><img src="Habit26.jpg" alt="Habit 26"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 26</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 27"><img src="Habit27.jpg" alt="Habit 27"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 27</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 28"><img src="Habit28.jpg" alt="Habit 28"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 28</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 29"><img src="Habit29.jpg" alt="Habit 29"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 29</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 30"><img src="Habit30.jpg" alt="Habit 30"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 30</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 31"><img src="Habit31.jpg" alt="Habit 31"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 31</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 32"><img src="Habit32.jpg" alt="Habit 32"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 32</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 33"><img src="Habit33.jpg" alt="Habit 33"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 33</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 34"><img src="Habit34.jpg" alt="Habit 34"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 34</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 35"><img src="Habit35.jpg" alt="Habit 35"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 35</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 36"><img src="Habit36.jpg" alt="Habit 36"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 36</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 37"><img src="Habit37.jpg" alt="Habit 37"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 37</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 38"><img src="Habit38.jpg" alt="Habit 38"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 38</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 39"><img src="Habit39.jpg" alt="Habit 39"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 39</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 40"><img src="Habit40.jpg" alt="Habit 40"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 40</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 41"><img src="Habit41.jpg" alt="Habit 41"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 41</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 42"><img src="Habit42.jpg" alt="Habit 42"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 42</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 43"><img src="Habit43.jpg" alt="Habit 43"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 43</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 44"><img src="Habit44.jpg" alt="Habit 44"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 44</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 45"><img src="Habit45.jpg" alt="Habit 45"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 45</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 46"><img src="Habit46.jpg" alt="Habit 46"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 46</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 47"><img src="Habit47.jpg" alt="Habit 47"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 47</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 48"><img src="Habit48.jpg" alt="Habit 48"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 48</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 49"><img src="Habit49.jpg" alt="Habit 49"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 49</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="vetement"><div class="product-image" data-label="Habit 50"><img src="Habit50.jpg" alt="Habit 50"></div><div class="product-info"><div class="product-category">Mode</div><h3>Habit 50</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 1"><img src="Sac1.jpg" alt="Sac 1"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 1</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 2"><img src="Sac2.jpg" alt="Sac 2"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 2</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 3"><img src="Sac3.jpg" alt="Sac 3"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 3</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 4"><img src="Sac4.jpg" alt="Sac 4"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 4</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 5"><img src="Sac5.jpg" alt="Sac 5"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 5</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 6"><img src="Sac6.jpg" alt="Sac 6"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 6</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 7"><img src="Sac7.jpg" alt="Sac 7"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 7</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 8"><img src="Sac8.jpg" alt="Sac 8"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 8</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 9"><img src="Sac9.jpg" alt="Sac 9"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 9</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 10"><img src="Sac10.jpg" alt="Sac 10"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 10</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 11"><img src="Sac11.jpg" alt="Sac 11"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 11</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 12"><img src="Sac12.jpg" alt="Sac 12"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 12</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 13"><img src="Sac13.jpg" alt="Sac 13"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 13</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 14"><img src="Sac14.jpg" alt="Sac 14"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 14</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 15"><img src="Sac15.jpg" alt="Sac 15"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 15</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 16"><img src="Sac16.jpg" alt="Sac 16"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 16</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 17"><img src="Sac17.jpg" alt="Sac 17"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 17</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 18"><img src="Sac18.jpg" alt="Sac 18"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 18</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 19"><img src="Sac19.jpg" alt="Sac 19"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 19</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<article class="product-card" data-cat="sac"><div class="product-image" data-label="Sac 20"><img src="Sac20.jpg" alt="Sac 20"></div><div class="product-info"><div class="product-category">Sac</div><h3>Sac 20</h3><div class="product-buttons"><button class="order-btn">Commander</button><button class="add-btn" aria-label="Ajouter au sac">＋</button></div></div></article>
+<div class="empty-state" id="emptyState" style="display:none">Aucun article ne correspond à votre recherche.</div>
+</div></div></section>
+<section class="about" id="apropos"><div class="container about-grid"><div class="about-art"><div>Maison<br>Shalom</div></div><div class="about-copy"><div class="eyebrow">Notre histoire</div><h2>À propos de Maison Shalom</h2><div class="about-parts"><div class="about-part"><b>01</b><p>Bienvenue chez Maison Shalom, votre espace dédié à la mode et au style. Nous vous proposons une sélection de vêtements pour hommes et femmes, ainsi que des sacs, afin de vous aider à trouver des articles qui correspondent à vos envies.</p></div><div class="about-part"><b>02</b><p>Notre objectif est de vous permettre de découvrir facilement chaque article grâce à des photos claires et agrandissables. Vous pouvez sélectionner vos favoris et nous contacter pour connaître leur disponibilité ainsi que leur prix.</p></div><div class="about-part"><b>03</b><p>Chez Maison Shalom, nous souhaitons rendre votre expérience simple, agréable et pratique. Parcourez notre collection, choisissez ce qui vous plaît et passez votre commande en quelques étapes.</p></div></div><div class="values"><div class="value"><strong>✧ Notre engagement</strong>Vous aider à découvrir les articles qui vous plaisent.</div><div class="value"><strong>♡ Notre priorité</strong>Une expérience de commande simple et claire.</div></div></div></div></section>
+<section id="comment"><div class="container"><div class="section-head"><div class="eyebrow">En quelques étapes</div><h2>Comment commander ?</h2><p>Votre article préféré est à portée de quelques clics.</p></div><div class="steps"><div class="step"><div class="step-number">1</div><h3>Explorez</h3><p>Parcourez les vêtements et les sacs. Touchez une photo pour l'agrandir.</p></div><div class="step"><div class="step-number">2</div><h3>Sélectionnez</h3><p>Appuyez sur Commander ou ajoutez plusieurs articles à votre sac avec le bouton ＋.</p></div><div class="step"><div class="step-number">3</div><h3>Confirmez</h3><p>Indiquez vos coordonnées et envoyez votre demande à Maison Shalom sur WhatsApp.</p></div></div></div></section>
+<section class="contact" id="contact"><div class="container"><div class="contact-box"><div class="eyebrow" style="color:#dff4ff">Un article vous plaît ?</div><h2>Nous sommes à votre écoute.</h2><p>Contactez Maison Shalom pour demander le prix, vérifier la disponibilité d'un article ou obtenir des renseignements sur votre commande.</p><a class="btn" href="#" id="contactBtn">Nous contacter</a></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-inner"><div><div class="footer-brand">Maison Shalom</div><div class="footer-note">Élégance &amp; style, à votre manière.</div></div><div class="footer-links"><a href="#accueil">Accueil</a><a href="#collection">Collection</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></div></div><div class="copyright">© <span id="year">2026</span> Maison Shalom. Tous droits réservés.<br>Site réalisé par Alain Web Studio.</div></div></footer>
+<div class="overlay" id="zoomOverlay"><div class="dialog zoom-dialog"><button class="close-btn" data-fermer="zoomOverlay" aria-label="Fermer">×</button><div class="zoom-frame"><img id="zoomImage" src="" alt=""></div><div class="zoom-caption" id="zoomCaption"></div></div></div>
+<div class="overlay" id="cartOverlay"><div class="dialog"><button class="close-btn" data-fermer="cartOverlay" aria-label="Fermer">×</button><h2>Mon sac ♡</h2><p class="dialog-subtitle">Retrouvez ici les articles que vous avez sélectionnés. Aucun prix n'est affiché.</p><div class="cart-items" id="cartItems"></div><button class="btn" id="checkoutBtn">Continuer ma commande</button><button class="btn btn-outline" id="continueShopping">Continuer mes achats</button></div></div>
+<div class="overlay" id="orderOverlay"><div class="dialog"><button class="close-btn" data-fermer="orderOverlay" aria-label="Fermer">×</button><h2>Votre commande</h2><p class="dialog-subtitle">Confirmez vos coordonnées : les articles choisis seront ajoutés automatiquement à votre message WhatsApp.</p><div class="cart-items" id="orderSummary"></div><form id="orderForm"><div class="field"><label for="customerName">Votre nom</label><input id="customerName" required maxlength="80" placeholder="Entrez votre nom"></div><div class="field"><label for="customerPhone">Votre numéro de téléphone</label><input id="customerPhone" required type="tel" maxlength="30" placeholder="Ex. : +243..."></div><div class="field"><label for="customerLocation">Votre ville ou commune</label><input id="customerLocation" maxlength="100" placeholder="Où vous trouvez-vous ?"></div><button class="btn" type="submit">Confirmer sur WhatsApp</button><p class="form-error" id="formError"></p></form></div></div>
+<script>
+var NUMERO = "243834750698"; /* Numéro WhatsApp : chiffres seulement, sans + ni espaces. Ex. : 243812345678 */
+var panier = [], commande = [], infos = {}, filtre = "tout";
+var cartes = document.querySelectorAll(".product-card");
+
+for(var i=0;i<cartes.length;i++){
+  var nom = cartes[i].querySelector("h3").textContent;
+  infos[nom] = {
+    src: cartes[i].querySelector("img").getAttribute("src"),
+    cat: cartes[i].getAttribute("data-cat") === "sac" ? "Sac" : "Mode"
+  };
+}
+function el(id){ return document.getElementById(id); }
+function ouvrir(id){ el(id).classList.add("open"); document.body.classList.add("locked"); }
+function fermer(id){
+  el(id).classList.remove("open");
+  if(!document.querySelector(".overlay.open")) document.body.classList.remove("locked");
+}
+function message(titre, texte){
+  var t = document.createElement("div");
+  t.className = "toast";
+  t.innerHTML = "<strong>" + titre + "</strong><span>" + texte + "</span>";
+  el("toastStack").appendChild(t);
+  setTimeout(function(){ t.remove(); }, 2800);
+}
+function majCompteur(){ el("cartCount").textContent = panier.length; }
+function ajouter(nom){
+  panier.push(nom);
+  majCompteur();
+  message("Article ajouté au sac", nom + " est prêt pour votre commande.");
+}
+function ligne(nom, bouton){
+  return '<div class="cart-row"><img src="' + infos[nom].src + '" alt="' + nom + '"><div class="cart-row-info"><strong>' + nom + '</strong><br><span>' + infos[nom].cat + '</span></div>' + bouton + '</div>';
+}
+function afficherPanier(){
+  var html = "";
+  if(!panier.length){
+    html = '<div class="empty-state">Votre sac est vide pour le moment.<br>Explorez la collection pour choisir vos articles.</div>';
+  } else {
+    for(var i=0;i<panier.length;i++) html += ligne(panier[i], '<button class="remove-btn" data-retirer="' + i + '">Retirer</button>');
+  }
+  el("cartItems").innerHTML = html;
+  el("checkoutBtn").disabled = !panier.length;
+}
+function commencer(noms){
+  commande = [];
+  for(var i=0;i<noms.length;i++){ if(commande.indexOf(noms[i]) === -1) commande.push(noms[i]); }
+  if(!commande.length){ alert("Veuillez sélectionner au moins un article."); return; }
+  var html = "";
+  for(var j=0;j<commande.length;j++) html += ligne(commande[j], "");
+  el("orderSummary").innerHTML = html;
+  el("formError").textContent = "";
+  fermer("cartOverlay");
+  ouvrir("orderOverlay");
+}
+function envoyer(texte){
+  if(NUMERO.indexOf("X") !== -1){ alert("Le numéro WhatsApp n'est pas encore configuré dans le code."); return false; }
+  window.location.href = "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(texte);
+  return true;
+}
+function afficher(){
+  var q = el("searchInput").value.toLowerCase().trim(), n = 0;
+  for(var i=0;i<cartes.length;i++){
+    var nom = cartes[i].querySelector("h3").textContent.toLowerCase();
+    var ok = (filtre === "tout" || cartes[i].getAttribute("data-cat") === filtre) && nom.indexOf(q) !== -1;
+    cartes[i].style.display = ok ? "" : "none";
+    if(ok) n++;
+  }
+  el("emptyState").style.display = n ? "none" : "block";
+}
+
+document.addEventListener("click", function(e){
+  var t = e.target, c;
+  if(t.classList.contains("overlay")){ fermer(t.id); return; }
+  if((c = t.closest("[data-fermer]"))){ fermer(c.getAttribute("data-fermer")); return; }
+  if((c = t.closest(".order-btn"))){ commencer([c.closest(".product-card").querySelector("h3").textContent]); return; }
+  if((c = t.closest(".add-btn"))){ ajouter(c.closest(".product-card").querySelector("h3").textContent); return; }
+  if((c = t.closest(".product-image"))){
+    var nom = c.closest(".product-card").querySelector("h3").textContent;
+    el("zoomImage").src = infos[nom].src;
+    el("zoomImage").alt = nom;
+    el("zoomCaption").textContent = nom + " — touchez en dehors de l'image pour fermer.";
+    ouvrir("zoomOverlay");
+    return;
+  }
+  if((c = t.closest("[data-retirer]"))){ panier.splice(Number(c.getAttribute("data-retirer")), 1); majCompteur(); afficherPanier(); return; }
+  if(t.closest("#openCart")){ afficherPanier(); ouvrir("cartOverlay"); return; }
+  if(t.closest("#checkoutBtn")){ commencer(panier); return; }
+  if(t.closest("#continueShopping")){ fermer("cartOverlay"); return; }
+  if(t.closest("#contactBtn")){ e.preventDefault(); envoyer("Bonjour Maison Shalom,\n\nJe souhaite obtenir des renseignements sur vos articles. Merci de bien vouloir me répondre.\n\nCordialement."); return; }
+  if(t.closest("#menuToggle")){ el("navlinks").classList.toggle("show"); return; }
+  if(t.closest("#navlinks a")){ el("navlinks").classList.remove("show"); }
+  if((c = t.closest("[data-filter]"))){
+    filtre = c.getAttribute("data-filter");
+    var bs = document.querySelectorAll(".filter-btn");
+    for(var i=0;i<bs.length;i++) bs[i].classList.toggle("active", bs[i] === c);
+    afficher();
+  }
+});
+el("searchInput").addEventListener("input", afficher);
+el("orderForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var nom = el("customerName").value.trim();
+  var tel = el("customerPhone").value.trim();
+  var lieu = el("customerLocation").value.trim();
+  if(!nom || !tel){ el("formError").textContent = "Veuillez remplir votre nom et votre numéro."; return; }
+  var enLigne = location.protocol.indexOf("http") === 0;
+  var texte = "Bonjour Maison Shalom,\n\nJe souhaite passer une commande pour le(s) article(s) suivant(s) :\n";
+  for(var i=0;i<commande.length;i++){
+    texte += "\n" + (i+1) + ". " + commande[i] + " (" + infos[commande[i]].cat + ")";
+    if(enLigne) texte += "\n   Photo : " + new URL(infos[commande[i]].src, location.href).href;
+  }
+  texte += "\n\nMes coordonnées :\n- Nom : " + nom + "\n- Téléphone : " + tel + "\n- Ville/commune : " + (lieu || "Non précisée");
+  texte += "\n\nJe vous remercie de bien vouloir me confirmer le prix et la disponibilité de ce(s) article(s).\n\nCordialement,\n" + nom;
+  if(envoyer(texte)) fermer("orderOverlay");
+});
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape"){
+    var o = document.querySelectorAll(".overlay.open");
+    for(var i=0;i<o.length;i++) fermer(o[i].id);
+  }
+});
+window.addEventListener("load", function(){
+  var imgs = document.querySelectorAll(".product-image img");
+  for(var i=0;i<imgs.length;i++){ if(!imgs[i].naturalWidth) imgs[i].style.display = "none"; }
+});
+el("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
